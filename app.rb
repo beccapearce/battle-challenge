@@ -9,15 +9,15 @@ get ('/secret') do
 end
 
 get ('/truth') do
-  'cold potatoes ain\'t hot'
+  'cold beans ain\'t hot'
 end
 
-get('/cat') do
-  "<style>
-  img{
-    border: dashed;
-    border-color: red;
-  }
-  </style>
-    <img src='http://bit.ly/1eze8aE'>"
+get('/random-cat') do
+  name = ["Mittens", "Trixie", "Fluffball", "Noah"]
+  erb(:index) {name.sample}
+end
+
+get('/named-cat') do
+  name = params[:name]
+  erb(:index) {name}
 end
