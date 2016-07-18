@@ -7,5 +7,14 @@ img{
 }
 </style>
 </head>
+
 <h1>My name is <%= yield %></h1>
+
   <img src='http://bit.ly/1eze8aE'>
+
+<% if yield.nil? %>
+<form action="/named-cat">
+    <input type="text" name="name">
+    <input type="submit" value= "Submit">
+  </form>
+  <% end %>
