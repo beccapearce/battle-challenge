@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <title>Battle</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapßis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container text-center">
-    <%= @game.player_1.name %> Attacked <%= @game.player_2.name %>
+  <div class="center">
+    <p><%= @game.players.first.name %> attacked <%= @game.players.last.name %></p>
     <a class="btn btn-primary" href="/play">OK</a>
   </div>
 </body>
