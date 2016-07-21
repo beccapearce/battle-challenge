@@ -17,7 +17,11 @@ describe Player do
   end
 
   describe '#receive_damage' do
+    before :each do
+      srand(10)
+    end
     it "Reduces the player's hit points" do
+
       expect { dave.receive_damage }.to change { dave.hit_points }.by(-10)
     end
   end
