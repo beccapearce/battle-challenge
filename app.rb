@@ -10,17 +10,17 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    $game = Game.new(params[:player_1_name], params[:player_2_name])
+    @game = Game.create(params[:player_1_name], params[:player_2_name])
     redirect '/play'
   end
 
   get '/play' do
-    @game = $game
+    @game = Game.instance
     erb :play
   end
 
   get '/attack' do
-    @game = $game
+    @game = Game.instance
     @game.attack
     if @game.loser
       redirect '/loser'
@@ -30,7 +30,7 @@ class Battle < Sinatra::Base
   end
 
   get '/loser' do
-    @game = $game
+    @game = Game.instance
     erb :loser
   end
 

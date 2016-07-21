@@ -24,4 +24,12 @@ class Game
     true if @players.first.lost?
   end
 
+  def self.instance
+    @game
+  end
+
+  def self.create(player_1_name, player_2_name)
+    @game = Game.new(player_1_name, player_2_name)
+  end
+
 end

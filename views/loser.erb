@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  <meta charset="UTF-8">
+  <title>Battle</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <%= @game.players.first.name %> is a LOSER!!!
-  <p><img src="https://media2.giphy.com/media/mcH0upG1TeEak/200.gif"></p>
+  <div class="container text-center">
+    <div class="names">
+      <%= @game.players.first.name %> is a LOSER!!!
+      <p><img src="https://media2.giphy.com/media/mcH0upG1TeEak/200.gif"></p>
+    </div>
+  </div>
 </body>
 </html>
