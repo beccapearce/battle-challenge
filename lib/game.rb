@@ -20,4 +20,8 @@ class Game
     @players.reverse!
   end
 
+  def loser
+    true if @players.first.lost?
+  end
+
 end
